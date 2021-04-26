@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://kit.fontawesome.com/0679a2a9f6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Profile Card</title>
+</head>
+
+<body>
+  <div class="main center">
+    <div class="box center">
+      <img src="profile.jpg" alt="">
+      <div class="">
+        <p class="user_name">Mayank Verma</p>
+        <p class="skill">Software Engineer</p>
+      </div>
+      <div class="arr_container center ">
+        <i class="fas fa-arrow-right"></i>
+      </div>
+      <div class="left_container off">
+        <p>Skills</p>
+        <div class="skills">
+          <div class="bor">Html</div>
+          <div class="bor">CSS</div>
+          <div class="bor">Javascript</div>
+          <div class="bor">Nodejs</div>
+          <div class="bor">C++</div>
+        </div>
+        <div class="icons">
+          <a href="https://github.com/immayankvrm" target="_blank"><i class="fab fa-github-square"></i></a>
+          <a href="https://www.linkedin.com/in/vinayak-verma-797428193/#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/vinayak.verma.353" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/vinayak.verma.353" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="cancel center">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script type="text/javascript">
+    const clc = document.querySelector(".cancel");
+    const arr = document.querySelector(".arr_container")
+    const left_container = document.querySelector(".left_container")
+
+    arr.addEventListener("click", () => {
+      arr.classList.add("active_arr");
+      if (left_container.classList.contains("off")) {
+        left_container.classList.remove("off");
+        left_container.classList.add("active");
+      }
+    });
+    clc.addEventListener("click", () => {
+      arr.classList.remove("active_arr");
+      if (left_container.classList.contains("active")) {
+        left_container.classList.remove("active");
+        left_container.classList.add("off")
+      }
+    });
+  </script>
+
+</body>
+
+</html>
